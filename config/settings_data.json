@@ -31,7 +31,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo_width": 100,
+          "logo": "shopify:\/\/shop_images\/ocean-water-with-swimmers.jpg",
+          "logo_width": 120,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "show_line_separator": true,
