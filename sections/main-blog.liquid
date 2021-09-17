@@ -3,19 +3,19 @@
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
 
+<aside>
+  {%- if section.settings.blog_show_tags -%}
+    <ul>
+      <li>
+        {%- for tag in blog.all_tags -%}
+          <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {%- endfor -%}
+      </li>
+    </ul>
+  {%- endif -%}
+</aside>
+
 {%- paginate blog.articles by 6 -%}
-
-{% for group_tag in blog.all_tags %}
-  <h2>{{ group_tag }}</h2>
-
-  {% for article in blog.articles %}
-    {% if article.tags contains group_tag %}
-      <h3>{{ article.title }}</h3>
-      <p>This article's tags: {{ article.tags }}</p>
-    {% endif %}
-  {% endfor %}
-
-{% endfor %}
 
   <div class="main-blog page-width">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
@@ -35,6 +35,8 @@
 {%- endpaginate -%}
 
 {% schema %}
+
+
 {
   "name": "t:sections.main-blog.name",
   "tag": "section",
