@@ -2,9 +2,9 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-<div style="float:left; width:16.67%"> <a href="https://najian-develop.myshopify.com/blogs/news">All </a> </div> 
+<div style="float:left; width:16.66%"> <a href="https://najian-develop.myshopify.com/blogs/news">All </a> </div> 
 {%- for tag in blog.all_tags -%}
-   <div style="float:left; width:16.67%"><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> </div>{% unless forloop.last %} {% endunless %}
+   <div style="float:left; width:16.66%"><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> </div>{% unless forloop.last %} {% endunless %}
 {%- endfor -%}
 
 {%- paginate blog.articles by 6 -%}
