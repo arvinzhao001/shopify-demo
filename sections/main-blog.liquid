@@ -5,9 +5,9 @@
 {%- paginate blog.articles by 6 -%}
 
   <div class="main-blog page-width">
-   <!-- <h1 class="title--primary">{{ blog.title | escape }}</h1> -->
+   <!-- <h1 class="title--primary">{{ blog.title | escape }}</h1> 
     
-    <div style="float:left; width:10%"> <a href="https://najian-develop.myshopify.com/blogs/news">All </a> </div>
+    <div style="float:left; width:10%"> <a href="https://najian-develop.myshopify.com/blogs/news">All </a> </div> -->
     
     {%- for tag in blog.all_tags -%}
         <div style="float:left; width:10%"><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> </div>{% unless forloop.last %} {% endunless %}
