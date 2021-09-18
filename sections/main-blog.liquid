@@ -12,9 +12,6 @@
 
 
     <div class="blog-articles">
-      {%- for tag in blog.all_tags -%}
-        <div style="float:left; width:10%"><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> </div>{% unless forloop.last %} {% endunless %}
-      {%- endfor -%}
       {%- for article in blog.articles -%}
         <div class="blog-articles__article article">
           {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
