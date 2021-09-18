@@ -177,7 +177,7 @@
         "swipe_on_mobile": false
       }
     },
-    "1630405992a93eeb88": {
+    "product-bs": {
       "type": "featured-collection",
       "settings": {
         "title": "Featured collection",
@@ -193,7 +193,7 @@
         "show_rating": false
       }
     },
-    "163188486404d22578": {
+    "blog-recent": {
       "type": "featured-blog",
       "settings": {
         "heading": "Blog posts",
@@ -214,7 +214,7 @@
     "collage",
     "video",
     "multi_column",
-    "1630405992a93eeb88",
-    "163188486404d22578"
+    "product-bs",
+    "blog-recent"
   ]
 }
